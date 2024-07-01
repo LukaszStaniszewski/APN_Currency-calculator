@@ -1,0 +1,15 @@
+<h1>Kalkulator walut</h1>
+<form class="calculator-form" *ngIf="currencyOptions$ | async as currencyOptions; else spinner" [formGroup]="form">
+  <section class="currency-group" formGroupName="baseCurrency">
+    <ui-field-select label='Wybierz podstawową walute' formControlName="rate" [options]="currencyOptions"/>
+    <ui-field-number label="Wpisz ilość" formControlName="amount"/>
+  </section>
+  <ui-button class="switch-button" ariaLabel="Zamień waluty" icon="import_export" (callback)="onSwitchCurrency()"/>
+  <section class="currency-group" formGroupName="targetCurrency">
+    <ui-field-select label='Wybierz docelową walute' formControlName="rate" [options]="currencyOptions"/>
+    <ui-field-number label="Wpisz ilość" formControlName="amount"/>
+  </section>
+</form>
+<ng-template #spinner>
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-template>

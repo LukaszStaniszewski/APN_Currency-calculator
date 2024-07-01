@@ -1,0 +1,4 @@
+<button class="switch-button" mat-icon-button [color]="design" [attr.aria-label]="ariaLabel"
+        (click)="callback.emit()">
+  <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+</button>

@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+
+.calculator-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.currency-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-button {
+  margin-bottom: 22px;
+  transform: rotate(90deg);
+}
+
+.spinner {
+  margin: auto;
+  width: 50%;
+}
+
+@media screen and (min-width: 700px) {
+
+  .currency-group {
+    width: 300px;
+    gap: 1rem;
+  }
+
+  .switch-button {
+    align-self: center;
+  }
+}
+
